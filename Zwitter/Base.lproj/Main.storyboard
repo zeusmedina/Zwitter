@@ -68,7 +68,7 @@
                                                         <constraint firstAttribute="height" constant="64" id="xyZ-Qk-VeI"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hbp-yn-Ip6">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="748" misplaced="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hbp-yn-Ip6">
                                                     <rect key="frame" x="102" y="25" width="38" height="16"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -83,7 +83,7 @@
                                                     <color key="textColor" red="0.49513561319999999" green="0.49513561319999999" blue="0.49513561319999999" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" misplaced="YES" text="Handle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1OF-Bx-oOP">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" misplaced="YES" text="Handle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1OF-Bx-oOP">
                                                     <rect key="frame" x="102" y="47" width="43" height="16"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="43" id="RXZ-LI-bwS"/>
@@ -92,27 +92,25 @@
                                                     <color key="textColor" red="0.49513561320754718" green="0.49513561320754718" blue="0.49513561320754718" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="RT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TMf-4O-lYc">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" misplaced="YES" text="RT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TMf-4O-lYc">
                                                     <rect key="frame" x="180" y="48" width="32" height="15"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qZF-Xh-jJw">
-                                                    <rect key="frame" x="180" y="19" width="30" height="27"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                    <state key="normal" title="RT"/>
-                                                </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="FAV" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o5h-2k-2Xx">
                                                     <rect key="frame" x="231" y="48" width="52" height="15"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aJL-5N-a6G">
+                                                <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aJL-5N-a6G">
                                                     <rect key="frame" x="231" y="19" width="30" height="27"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <state key="normal" title="FAV"/>
+                                                    <connections>
+                                                        <action selector="onFavButton:" destination="Nth-OY-IYs" eventType="touchUpInside" id="YG0-fU-icZ"/>
+                                                    </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Tweet" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Gb-wy-bMu">
                                                     <rect key="frame" x="23" y="80" width="42" height="18"/>
@@ -120,10 +118,18 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" horizontalCompressionResistancePriority="751" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qZF-Xh-jJw">
+                                                    <rect key="frame" x="180" y="19" width="30" height="27"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <state key="normal" title="RT"/>
+                                                    <connections>
+                                                        <action selector="onRetweetButton:" destination="Nth-OY-IYs" eventType="touchUpInside" id="cm3-fc-eBQ"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="qZF-Xh-jJw" firstAttribute="leading" secondItem="hbp-yn-Ip6" secondAttribute="trailing" constant="40" id="2ln-oE-avO"/>
-                                                <constraint firstItem="qZF-Xh-jJw" firstAttribute="leading" secondItem="hbp-yn-Ip6" secondAttribute="trailing" constant="40" id="2oz-ZK-Yeq"/>
+                                                <constraint firstItem="qZF-Xh-jJw" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="hbp-yn-Ip6" secondAttribute="trailing" constant="39" id="2oz-ZK-Yeq"/>
                                                 <constraint firstItem="7Gb-wy-bMu" firstAttribute="top" secondItem="1OF-Bx-oOP" secondAttribute="bottom" constant="16" id="5vJ-ja-AL6"/>
                                                 <constraint firstItem="hbp-yn-Ip6" firstAttribute="leading" secondItem="YIf-tU-geX" secondAttribute="trailing" constant="15" id="8W2-JD-MZl"/>
                                                 <constraint firstAttribute="trailing" secondItem="o5h-2k-2Xx" secondAttribute="trailing" constant="317" id="8p4-sH-uoo"/>
@@ -157,6 +163,7 @@
                                                 <constraint firstItem="qZF-Xh-jJw" firstAttribute="leading" secondItem="1OF-Bx-oOP" secondAttribute="trailing" constant="11" id="bcC-nW-5Qp"/>
                                                 <constraint firstItem="aJL-5N-a6G" firstAttribute="leading" secondItem="qZF-Xh-jJw" secondAttribute="trailing" constant="21" id="dTH-Cv-M23"/>
                                                 <constraint firstItem="1OF-Bx-oOP" firstAttribute="leading" secondItem="YIf-tU-geX" secondAttribute="trailing" constant="15" id="dd2-3H-W5O"/>
+                                                <constraint firstItem="qZF-Xh-jJw" firstAttribute="leading" secondItem="hbp-yn-Ip6" secondAttribute="trailing" constant="8" id="jHc-uh-OmW"/>
                                                 <constraint firstItem="YIf-tU-geX" firstAttribute="leading" secondItem="Vyq-Dn-QXg" secondAttribute="leading" constant="23" id="jLG-F0-CzB"/>
                                                 <constraint firstItem="YIf-tU-geX" firstAttribute="top" secondItem="Vyq-Dn-QXg" secondAttribute="top" constant="8" id="m5O-SA-fIw"/>
                                                 <constraint firstItem="1OF-Bx-oOP" firstAttribute="top" secondItem="hbp-yn-Ip6" secondAttribute="bottom" constant="6" id="mbS-ag-iaM"/>
@@ -176,6 +183,7 @@
                                                     <exclude reference="uge-Bz-U3S"/>
                                                     <exclude reference="dd2-3H-W5O"/>
                                                     <exclude reference="2ln-oE-avO"/>
+                                                    <exclude reference="2oz-ZK-Yeq"/>
                                                     <exclude reference="DP0-f2-k2a"/>
                                                     <exclude reference="OJb-UL-gdL"/>
                                                     <exclude reference="Omm-lu-i0A"/>
@@ -186,6 +194,7 @@
                                                     <exclude reference="bcC-nW-5Qp"/>
                                                     <exclude reference="D4W-ss-iav"/>
                                                     <exclude reference="H3u-Hf-1Sq"/>
+                                                    <exclude reference="KHW-yu-hx3"/>
                                                     <exclude reference="Nef-b8-NFr"/>
                                                     <exclude reference="Y5U-a2-5qZ"/>
                                                     <exclude reference="Fhw-Fc-Xqx"/>

@@ -19,6 +19,8 @@ class TweetCell: UITableViewCell {
     @IBOutlet weak var favLabel: UILabel!
     
     
+    var favoriteStatus: Bool?
+    var retweetStatus: Bool?
     
     var tweet: Tweet! {
         didSet {
@@ -35,11 +37,51 @@ class TweetCell: UITableViewCell {
         }
     }
     
+    
+    @IBAction func onRetweetButton(sender: AnyObject) {
+        if retweetStatus == true {
+            retweetStatus = false
+            self.tweet.retweetCount--
+            rtLabel.text = String(tweet.retweetCount)
+            
+        } else {
+            retweetStatus = true
+            self.tweet.retweetCount++
+            rtLabel.text = String(tweet.retweetCount)
+        }
+
+        
+    }
+   
+    
+    @IBAction func onFavButton(sender: AnyObject) {
+        if favoriteStatus == true {
+            favoriteStatus = false
+            self.tweet.favorites_count--
+            favLabel.text = String(tweet.favorites_count)
+            
+        } else {
+            favoriteStatus = true
+            self.tweet.favorites_count++
+            favLabel.text = String(tweet.favorites_count)
+        }
+
+    }
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
+        profileName.preferredMaxLayoutWidth = profileName.frame.size.width
+        profileHandle.preferredMaxLayoutWidth = profileHandle.frame.size.width
     }
-
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        profileName.preferredMaxLayoutWidth = profileName.frame.size.width
+        profileHandle.preferredMaxLayoutWidth = profileHandle.frame.size.width
+    }
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
