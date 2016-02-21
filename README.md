@@ -1,6 +1,6 @@
 # Project 4 - *Zeus Medina*
 
-**Name of your app** is a basic twitter app to read and compose tweets the [Twitter API](https://apps.twitter.com/).
+**Zwitter** is a basic twitter app to read and compose tweets the [Twitter API](https://apps.twitter.com/).
 
 Time spent: **12** hours spent in total
 
