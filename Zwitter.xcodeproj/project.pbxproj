@@ -7,21 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3982E44954EDF6B0DB7D1572 /* Pods_Zwitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66BCBFB8E41431FEAD01CFC6 /* Pods_Zwitter.framework */; };
+		CE1E41EC1C78F53B00F763D6 /* TweetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1E41EB1C78F53B00F763D6 /* TweetCell.swift */; };
 		CE7656F11C77DCD500EB7981 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7656F01C77DCD500EB7981 /* AppDelegate.swift */; };
-		CE7656F31C77DCD500EB7981 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7656F21C77DCD500EB7981 /* ViewController.swift */; };
 		CE7656F61C77DCD500EB7981 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE7656F41C77DCD500EB7981 /* Main.storyboard */; };
 		CE7656F81C77DCD500EB7981 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE7656F71C77DCD500EB7981 /* Assets.xcassets */; };
 		CE7656FB1C77DCD500EB7981 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE7656F91C77DCD500EB7981 /* LaunchScreen.storyboard */; };
+		CE7657031C77DE9000EB7981 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7657021C77DE9000EB7981 /* LoginViewController.swift */; };
+		CEFDF1881C77EE7000C5607B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFDF1871C77EE7000C5607B /* User.swift */; };
+		CEFDF18A1C77EE7B00C5607B /* Tweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFDF1891C77EE7B00C5607B /* Tweet.swift */; };
+		CEFDF18C1C78173D00C5607B /* TwitterClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFDF18B1C78173D00C5607B /* TwitterClient.swift */; };
+		CEFDF18E1C782E5F00C5607B /* TweetsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFDF18D1C782E5F00C5607B /* TweetsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4D235261AA357FF051D6DA4C /* Pods-Zwitter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Zwitter.release.xcconfig"; path = "Pods/Target Support Files/Pods-Zwitter/Pods-Zwitter.release.xcconfig"; sourceTree = "<group>"; };
+		66BCBFB8E41431FEAD01CFC6 /* Pods_Zwitter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Zwitter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA0F999F6DCF26C6BE752C9D /* Pods-Zwitter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Zwitter.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Zwitter/Pods-Zwitter.debug.xcconfig"; sourceTree = "<group>"; };
+		CE1E41EB1C78F53B00F763D6 /* TweetCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetCell.swift; sourceTree = "<group>"; };
 		CE7656ED1C77DCD500EB7981 /* Zwitter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Zwitter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE7656F01C77DCD500EB7981 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CE7656F21C77DCD500EB7981 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CE7656F51C77DCD500EB7981 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CE7656F71C77DCD500EB7981 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE7656FA1C77DCD500EB7981 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE7656FC1C77DCD500EB7981 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE7657021C77DE9000EB7981 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		CEFDF1871C77EE7000C5607B /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		CEFDF1891C77EE7B00C5607B /* Tweet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tweet.swift; sourceTree = "<group>"; };
+		CEFDF18B1C78173D00C5607B /* TwitterClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterClient.swift; sourceTree = "<group>"; };
+		CEFDF18D1C782E5F00C5607B /* TweetsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +43,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3982E44954EDF6B0DB7D1572 /* Pods_Zwitter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BEFBDB1CF3028515DD990D0B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AA0F999F6DCF26C6BE752C9D /* Pods-Zwitter.debug.xcconfig */,
+				4D235261AA357FF051D6DA4C /* Pods-Zwitter.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		CE1E41EA1C78F4D500F763D6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CE1E41EB1C78F53B00F763D6 /* TweetCell.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		CE7656E41C77DCD500EB7981 = {
 			isa = PBXGroup;
 			children = (
 				CE7656EF1C77DCD500EB7981 /* Zwitter */,
 				CE7656EE1C77DCD500EB7981 /* Products */,
+				BEFBDB1CF3028515DD990D0B /* Pods */,
+				F6D5707AAF46AD529CA41384 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +88,51 @@
 		CE7656EF1C77DCD500EB7981 /* Zwitter */ = {
 			isa = PBXGroup;
 			children = (
+				CE1E41EA1C78F4D500F763D6 /* Views */,
+				CEFDF1861C77EE3E00C5607B /* API */,
+				CEFDF1851C77EE0800C5607B /* View Controllers */,
+				CEFDF1841C77EE0400C5607B /* Models */,
 				CE7656F01C77DCD500EB7981 /* AppDelegate.swift */,
-				CE7656F21C77DCD500EB7981 /* ViewController.swift */,
 				CE7656F41C77DCD500EB7981 /* Main.storyboard */,
 				CE7656F71C77DCD500EB7981 /* Assets.xcassets */,
 				CE7656F91C77DCD500EB7981 /* LaunchScreen.storyboard */,
 				CE7656FC1C77DCD500EB7981 /* Info.plist */,
 			);
 			path = Zwitter;
+			sourceTree = "<group>";
+		};
+		CEFDF1841C77EE0400C5607B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CEFDF1871C77EE7000C5607B /* User.swift */,
+				CEFDF1891C77EE7B00C5607B /* Tweet.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		CEFDF1851C77EE0800C5607B /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CE7657021C77DE9000EB7981 /* LoginViewController.swift */,
+				CEFDF18D1C782E5F00C5607B /* TweetsViewController.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		CEFDF1861C77EE3E00C5607B /* API */ = {
+			isa = PBXGroup;
+			children = (
+				CEFDF18B1C78173D00C5607B /* TwitterClient.swift */,
+			);
+			name = API;
+			sourceTree = "<group>";
+		};
+		F6D5707AAF46AD529CA41384 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				66BCBFB8E41431FEAD01CFC6 /* Pods_Zwitter.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +142,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CE7656FF1C77DCD500EB7981 /* Build configuration list for PBXNativeTarget "Zwitter" */;
 			buildPhases = (
+				109DF83265C6B1EDCC651D42 /* Check Pods Manifest.lock */,
 				CE7656E91C77DCD500EB7981 /* Sources */,
 				CE7656EA1C77DCD500EB7981 /* Frameworks */,
 				CE7656EB1C77DCD500EB7981 /* Resources */,
+				EC2B3DF4321953E8517EC16D /* Embed Pods Frameworks */,
+				30F5E43E026543845E910BAC /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -131,12 +205,65 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		109DF83265C6B1EDCC651D42 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		30F5E43E026543845E910BAC /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Zwitter/Pods-Zwitter-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EC2B3DF4321953E8517EC16D /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Zwitter/Pods-Zwitter-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		CE7656E91C77DCD500EB7981 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE7656F31C77DCD500EB7981 /* ViewController.swift in Sources */,
+				CEFDF1881C77EE7000C5607B /* User.swift in Sources */,
+				CE1E41EC1C78F53B00F763D6 /* TweetCell.swift in Sources */,
+				CEFDF18A1C77EE7B00C5607B /* Tweet.swift in Sources */,
+				CE7657031C77DE9000EB7981 /* LoginViewController.swift in Sources */,
+				CEFDF18E1C782E5F00C5607B /* TweetsViewController.swift in Sources */,
+				CEFDF18C1C78173D00C5607B /* TwitterClient.swift in Sources */,
 				CE7656F11C77DCD500EB7981 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -248,6 +375,7 @@
 		};
 		CE7657001C77DCD500EB7981 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AA0F999F6DCF26C6BE752C9D /* Pods-Zwitter.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Zwitter/Info.plist;
@@ -259,6 +387,7 @@
 		};
 		CE7657011C77DCD500EB7981 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4D235261AA357FF051D6DA4C /* Pods-Zwitter.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Zwitter/Info.plist;
@@ -287,6 +416,7 @@
 				CE7657011C77DCD500EB7981 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
