@@ -20,7 +20,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yho-6e-TGn">
                                 <rect key="frame" x="76" y="409" width="169" height="65"/>
                                 <color key="backgroundColor" red="0.0" green="0.76166204251357339" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Button">
+                                <state key="normal" title="Login Into Twitter">
                                     <color key="titleColor" red="0.96600101292025042" green="0.99225315675748638" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>

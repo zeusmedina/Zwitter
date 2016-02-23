@@ -49,7 +49,9 @@ class TweetCell: UITableViewCell {
             self.tweet.retweetCount++
             rtLabel.text = String(tweet.retweetCount)
         }
-
+        TwitterClient.sharedInstance.retweet(tweet.tweetID as! String)
+        //print(tweet.tweetID)
+        //print(tweet.text)
         
     }
    
@@ -65,6 +67,7 @@ class TweetCell: UITableViewCell {
             self.tweet.favorites_count++
             favLabel.text = String(tweet.favorites_count)
         }
+         TwitterClient.sharedInstance.favorite(tweet.tweetID as! String)
 
     }
     
