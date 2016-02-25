@@ -32,6 +32,8 @@ class TweetCell: UITableViewCell {
             tweetDateAndTime.text = String(tweet.timestamp!)
             favLabel.text = String(tweet.favorites_count)
             rtLabel.text = String(tweet.retweetCount)
+            retweetStatus = tweet.isRetweeted
+            favoriteStatus = tweet.isFavorited
             
             
         }
