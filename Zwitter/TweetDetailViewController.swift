@@ -20,6 +20,9 @@ class TweetDetailViewController: UIViewController {
     @IBOutlet weak var favLabel: UILabel!
     
     var tweet: Tweet!
+    
+    var favoriteStatus: Bool?
+    var retweetStatus: Bool?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,14 +41,16 @@ class TweetDetailViewController: UIViewController {
         favLabel.text = String(tweet.favorites_count)
         rtLabel.text = String(tweet.retweetCount)
 
-        
+        retweetStatus = tweet.isRetweeted
+        favoriteStatus = tweet.isFavorited
         
     }
     
+    //TODO: Make retweet status and count consistent across views
     @IBAction func detailRetweet(sender: AnyObject) {
         
     }
-
+    //TODO: Make favorite status and count consisten across views
     @IBAction func detailFavorite(sender: AnyObject) {
         
     }

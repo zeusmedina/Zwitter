@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol profilePictureTappedDelegate {
+    func userDidTapProfilePicture(tweet: Tweet)
+}
+
 class TweetCell: UITableViewCell {
 
     @IBOutlet weak var profilePicture: UIImageView!
@@ -22,6 +26,9 @@ class TweetCell: UITableViewCell {
     var favoriteStatus: Bool?
     var retweetStatus: Bool?
     
+    
+    
+    //userProfileImageView.addGestureRecognizer(tapGestureRecognizer)
     var tweet: Tweet! {
         didSet {
             profilePicture.setImageWithURL((tweet.user?.profileUrl)!)
@@ -43,11 +50,13 @@ class TweetCell: UITableViewCell {
     @IBAction func onRetweetButton(sender: AnyObject) {
         if retweetStatus == true {
             retweetStatus = false
+            tweet.isRetweeted = false
             self.tweet.retweetCount--
             rtLabel.text = String(tweet.retweetCount)
             
         } else {
             retweetStatus = true
+            tweet.isRetweeted = true
             self.tweet.retweetCount++
             rtLabel.text = String(tweet.retweetCount)
         }
@@ -61,12 +70,14 @@ class TweetCell: UITableViewCell {
     @IBAction func onFavButton(sender: AnyObject) {
         if favoriteStatus == true {
             favoriteStatus = false
+            tweet.isFavorited = false
             self.tweet.favorites_count--
             favLabel.text = String(tweet.favorites_count)
             
         } else {
             favoriteStatus = true
             self.tweet.favorites_count++
+            tweet.isFavorited = true
             favLabel.text = String(tweet.favorites_count)
         }
          TwitterClient.sharedInstance.favorite(tweet.tweetID as! String)
@@ -80,7 +91,25 @@ class TweetCell: UITableViewCell {
         
         profileName.preferredMaxLayoutWidth = profileName.frame.size.width
         profileHandle.preferredMaxLayoutWidth = profileHandle.frame.size.width
+        
+        /*
+        //Create Tap Gesture Recognizer for profile image
+        let tapGestureRecognizer = UITapGestureRecognizer()
+        tapGestureRecognizer.addTarget(self, action: "profileImageTapped")
+        profilePicture.addGestureRecognizer(tapGestureRecognizer)
+        */
     }
+    
+    @IBAction func profileImageButtonTapped(sender: AnyObject) {
+        print("Picture tapped")
+        
+    }
+    
+    /*
+    func profileImageTapped() {
+        print("Picture tapped")
+    }
+    */
     
     override func layoutSubviews() {
         super.layoutSubviews()

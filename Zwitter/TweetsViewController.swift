@@ -76,6 +76,7 @@ class TweetsViewController: UIViewController, UITableViewDelegate, UITableViewDa
         let detailViewController = segue.destinationViewController as! TweetDetailViewController
     
         detailViewController.tweet = tweet
+        
     }
 
 
