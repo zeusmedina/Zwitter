@@ -190,6 +190,11 @@
                                 <action selector="onLogoutButton:" destination="mU6-Io-KSO" id="NVz-nv-2xF"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="new-tweet" id="dBX-89-an9">
+                            <connections>
+                                <segue destination="6NP-hQ-D8N" kind="modal" identifier="NewTweetSegue" id="9CF-kx-Xmu"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="GLp-5J-39S" id="Y5v-i4-hvO"/>
@@ -198,6 +203,67 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ke5-dM-csI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="896" y="395"/>
+        </scene>
+        <!--New Tweet View Controller-->
+        <scene sceneID="3qP-hp-S6z">
+            <objects>
+                <viewController id="6NP-hQ-D8N" customClass="NewTweetViewController" customModule="Zwitter" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hHa-Mi-vIr"/>
+                        <viewControllerLayoutGuide type="bottom" id="9LB-xS-hHP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="I03-OQ-M0y">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Enter your Tweet!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rl8-kT-uW4">
+                                <rect key="frame" x="93" y="82" width="135" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yfP-E0-2dV">
+                                <rect key="frame" x="20" y="144" width="280" height="30"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="tweetIsBeingTyped:" destination="6NP-hQ-D8N" eventType="editingChanged" id="iZU-x5-UJW"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8HH-vR-4cF">
+                                <rect key="frame" x="224" y="204" width="36" height="30"/>
+                                <state key="normal" title="Send"/>
+                                <connections>
+                                    <action selector="onSend:" destination="6NP-hQ-D8N" eventType="touchUpInside" id="9SW-yt-wHL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HUr-Qw-GXp">
+                                <rect key="frame" x="44" y="204" width="48" height="30"/>
+                                <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <action selector="onCancel:" destination="6NP-hQ-D8N" eventType="touchUpInside" id="riH-CU-zOg"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="140" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eMv-lQ-qDr">
+                                <rect key="frame" x="146" y="111" width="29" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="cancelButton" destination="HUr-Qw-GXp" id="6Hj-N1-wxz"/>
+                        <outlet property="newTweetTextField" destination="yfP-E0-2dV" id="vFa-J1-cef"/>
+                        <outlet property="numberChar" destination="eMv-lQ-qDr" id="cvu-eH-DWf"/>
+                        <outlet property="sendButton" destination="8HH-vR-4cF" id="bWg-DH-WI6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JB3-I5-JJN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1261" y="1019"/>
         </scene>
         <!--Profile View Controller-->
         <scene sceneID="6IL-Uv-45k">
@@ -334,6 +400,7 @@
     </scenes>
     <resources>
         <image name="like-action" width="54" height="72"/>
+        <image name="new-tweet" width="30" height="21"/>
         <image name="retweet-action" width="75" height="72"/>
     </resources>
 </document>

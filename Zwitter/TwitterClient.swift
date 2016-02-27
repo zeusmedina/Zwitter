@@ -64,6 +64,14 @@ class TwitterClient: BDBOAuth1SessionManager {
 
     }
     
+    func sendTweet(tweetContent: String) {
+        POST("https://api.twitter.com/1.1/statuses/update.json?status=\(tweetContent)", parameters: nil, progress: nil, success: { (operation: NSURLSessionDataTask, response: AnyObject?) -> Void in
+            print("Tweet was sent!")
+            }) { (operation: NSURLSessionDataTask?, error: NSError) -> Void in
+                NSLog("There was an error in sending the tweet: \(error)")
+        }
+    }
+    
     func homeTimeline(success: ([Tweet]) -> (), failure: (NSError) -> ()) {
         GET("1.1/statuses/home_timeline.json", parameters: nil, progress: nil, success: { (task: NSURLSessionDataTask, response: AnyObject?) -> Void in
             let dictionaries = response as! [NSDictionary]
