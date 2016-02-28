@@ -15,20 +15,41 @@ class User: NSObject {
     var tagline: String?
     
     var dictionary: NSDictionary?
+    var profileBackgroundString: String?
+    var profileBackgroundUrl: NSURL?
+    
+    var numTweetsLabel: Int?
+    var numFollowersLabel: Int?
+    var numFollowingLabel: Int?
     
     init(dictionary: NSDictionary) {
         self.dictionary = dictionary
         
         name = dictionary["name"] as? String
         screenName = dictionary["screen_name"] as? String
-        
+    
         let profileUrlString = dictionary["profile_image_url_https"] as? String
         
         if let profileUrlString = profileUrlString {
             profileUrl = NSURL(string: profileUrlString)
         }
         
+        
         tagline = dictionary["description"] as? String
+        
+        profileBackgroundString = dictionary["profile_background_image_url"] as? String
+        if let profileBackgroundString = profileBackgroundString {
+            profileBackgroundUrl = NSURL(string: profileBackgroundString)
+        } else {
+            
+            // a default unsplash photo
+            profileBackgroundUrl = NSURL(string: "https://images.unsplash.com/photo-1427835569204-a54780340cb5?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=004e391f8d744a509a9100f69ee96792")
+        }
+        
+        numFollowersLabel = dictionary["followers_count"] as? Int
+        numFollowingLabel = dictionary["friends_count"] as? Int
+        numTweetsLabel = dictionary["statuses_count"] as? Int
+        
 
     }
     static let userDidLogoutNotification = "UserDidLogout"

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TweetsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class TweetsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, TweetCellDelegate {
     
     @IBOutlet weak var tableView: UITableView!
     var tweets: [Tweet]?
@@ -61,6 +61,7 @@ class TweetsViewController: UIViewController, UITableViewDelegate, UITableViewDa
             cell.tweet = tweets![indexPath.row]
         }
         //cell.selectionStyle = UITableViewCellSelectionStyle.None
+        cell.delegate = self
         return cell
         
     }
@@ -69,11 +70,29 @@ class TweetsViewController: UIViewController, UITableViewDelegate, UITableViewDa
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
     
+    
+    func tweetCellUserProfileImageTapped(cell: TweetCell, forTwitterUser user: User?) {
+        
+        print(user)
+        print("Something else")
+        if let profileViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("ProfileViewController") as? ProfileViewController {
+            // get the user from the cell here and assign it to `user` object in `profileViewController`
+            profileViewController.user = user
+            
+            // push the `profileViewController` at the top of nav controller
+            navigationController?.pushViewController(profileViewController, animated: true)
+            
+        }
+    }
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if (segue.identifier == "NewTweetSegue") {
             //let destination = segue.destinationViewController as? NewTweetViewController
             
-        } else {
+        }/*else if(segue.identifier == "ProfileViewSegue") {
+            print("Profile view seg")
+        }*/ 
+        else if (segue.identifier == "DetailViewSegue") {
             let cell = sender as! TweetCell
             let indexPath = tableView.indexPathForCell(cell)
             
@@ -86,6 +105,7 @@ class TweetsViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         }
     }
+    
 
 
     /*

@@ -8,11 +8,14 @@
 
 import UIKit
 
-protocol profilePictureTappedDelegate {
-    func userDidTapProfilePicture(tweet: Tweet)
+@objc protocol TweetCellDelegate: class {
+    optional func tweetCellUserProfileImageTapped(cell: TweetCell, forTwitterUser user: User?)
 }
 
 class TweetCell: UITableViewCell {
+    
+    
+    weak var delegate: TweetCellDelegate?
 
     @IBOutlet weak var profilePicture: UIImageView!
     @IBOutlet weak var profileName: UILabel!
@@ -22,13 +25,10 @@ class TweetCell: UITableViewCell {
     @IBOutlet weak var rtLabel: UILabel!
     @IBOutlet weak var favLabel: UILabel!
     
-    
     var favoriteStatus: Bool?
     var retweetStatus: Bool?
     
-    
-    
-    //userProfileImageView.addGestureRecognizer(tapGestureRecognizer)
+
     var tweet: Tweet! {
         didSet {
             profilePicture.setImageWithURL((tweet.user?.profileUrl)!)
@@ -41,6 +41,10 @@ class TweetCell: UITableViewCell {
             rtLabel.text = String(tweet.retweetCount)
             retweetStatus = tweet.isRetweeted
             favoriteStatus = tweet.isFavorited
+            
+            let tapGestureRecognizer = UITapGestureRecognizer()
+            tapGestureRecognizer.addTarget(self, action: "profileImageTapped")
+            profilePicture.addGestureRecognizer(tapGestureRecognizer)
             
             
         }
@@ -92,24 +96,21 @@ class TweetCell: UITableViewCell {
         profileName.preferredMaxLayoutWidth = profileName.frame.size.width
         profileHandle.preferredMaxLayoutWidth = profileHandle.frame.size.width
         
-        /*
+        
         //Create Tap Gesture Recognizer for profile image
         let tapGestureRecognizer = UITapGestureRecognizer()
         tapGestureRecognizer.addTarget(self, action: "profileImageTapped")
         profilePicture.addGestureRecognizer(tapGestureRecognizer)
-        */
-    }
-    
-    @IBAction func profileImageButtonTapped(sender: AnyObject) {
-        print("Picture tapped")
         
     }
     
-    /*
+    
+    
     func profileImageTapped() {
-        print("Picture tapped")
+        print("TAP")
+        delegate?.tweetCellUserProfileImageTapped?(self, forTwitterUser: tweet.user)
     }
-    */
+    
     
     override func layoutSubviews() {
         super.layoutSubviews()
