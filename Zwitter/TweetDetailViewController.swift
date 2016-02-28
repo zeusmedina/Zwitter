@@ -48,10 +48,37 @@ class TweetDetailViewController: UIViewController {
     
     //TODO: Make retweet status and count consistent across views
     @IBAction func detailRetweet(sender: AnyObject) {
+        if retweetStatus == true {
+            retweetStatus = false
+            tweet.isRetweeted = false
+            self.tweet.retweetCount--
+            rtLabel.text = String(tweet.retweetCount)
+            
+        } else {
+            retweetStatus = true
+            tweet.isRetweeted = true
+            self.tweet.retweetCount++
+            rtLabel.text = String(tweet.retweetCount)
+        }
+        TwitterClient.sharedInstance.retweet(tweet.tweetID as! String)
         
     }
     //TODO: Make favorite status and count consisten across views
     @IBAction func detailFavorite(sender: AnyObject) {
+        if favoriteStatus == true {
+            favoriteStatus = false
+            tweet.isFavorited = false
+            self.tweet.favorites_count--
+            favLabel.text = String(tweet.favorites_count)
+            
+        } else {
+            favoriteStatus = true
+            self.tweet.favorites_count++
+            tweet.isFavorited = true
+            favLabel.text = String(tweet.favorites_count)
+        }
+        TwitterClient.sharedInstance.favorite(tweet.tweetID as! String)
+
         
     }
     override func didReceiveMemoryWarning() {

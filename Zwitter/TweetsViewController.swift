@@ -11,6 +11,9 @@ import UIKit
 class TweetsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, TweetCellDelegate {
     
     @IBOutlet weak var tableView: UITableView!
+    
+    var refreshController: UIRefreshControl!
+    
     var tweets: [Tweet]?
 
     override func viewDidLoad() {
@@ -32,16 +35,38 @@ class TweetsViewController: UIViewController, UITableViewDelegate, UITableViewDa
                 
         }
      
-
+        setupRefreshController()
+        
         // Do any additional setup after loading the view.
         
     }
-
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that c  n be recreated.
     }
+    
+    
+    func setupRefreshController() {
+        self.refreshController = UIRefreshControl()
+        self.refreshController.addTarget(self, action: "refresh:", forControlEvents: UIControlEvents.ValueChanged)
+        self.tableView.addSubview(refreshController)
+    }
+    
+    func refresh(sender:AnyObject) {
+        // Call timeline and reload if successful
+        TwitterClient.sharedInstance.homeTimeline({ (tweets: [Tweet]) -> () in
+            self.tweets = tweets
+            self.tableView.reloadData()
+            }) { (error: NSError) -> () in
+                
+                
+        }
+
+        refreshController?.endRefreshing()
+    }
+
     
     @IBAction func onLogoutButton(sender: AnyObject) {
         TwitterClient.sharedInstance.logout()
